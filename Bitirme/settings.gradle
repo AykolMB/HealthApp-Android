@@ -1,0 +1,2 @@
+rootProject.name = "Bitirme"
+include ':app'
