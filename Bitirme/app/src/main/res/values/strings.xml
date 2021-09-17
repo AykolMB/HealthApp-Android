@@ -1,5 +1,3 @@
 <resources>
-    <string name="app_name">Bitirme</string>
     <string name="LifeTracker">Health Tracker</string>
-    <string name="Nabız">Heart Beat/Pulse</string>
 </resources>

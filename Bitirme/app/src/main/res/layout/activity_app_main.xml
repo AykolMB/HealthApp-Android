@@ -12,6 +12,7 @@
         android:id="@+id/logout_App"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="198dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
         android:text="Log Out"
@@ -19,6 +20,7 @@
         android:textSize="16sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/tv_profile"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
@@ -91,8 +93,9 @@
         android:layout_width="350dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="24dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="24dp"
         android:layout_marginEnd="24dp"
+        android:clickable="false"
         app:cardBackgroundColor="@color/teal_200"
         app:cardCornerRadius="20dp"
         app:cardElevation="10dp"
@@ -104,13 +107,13 @@
         app:layout_constraintTop_toBottomOf="@+id/age_AppMain">
 
         <TextView
-            android:id="@+id/pulse_AppMain"
+            android:id="@+id/measure_AppMain"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="bottom|center_horizontal"
             android:layout_marginTop="20dp"
             android:layout_marginBottom="20dp"
-            android:text="Heart Beat / Pulse"
+            android:text="Measure"
             android:textColor="#E91E63"
             android:textSize="20sp"
             android:textStyle="bold" />
@@ -125,6 +128,7 @@
         android:layout_marginStart="24dp"
         android:layout_marginTop="80dp"
         android:layout_marginEnd="24dp"
+        android:clickable="false"
         app:cardBackgroundColor="@color/teal_200"
         app:cardCornerRadius="20dp"
         app:cardElevation="10dp"
@@ -136,19 +140,33 @@
         app:layout_constraintTop_toTopOf="@+id/pulseCard">
 
         <TextView
-            android:id="@+id/temp_AppMain"
+            android:id="@+id/report_AppMain"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="bottom|center_horizontal"
             android:layout_marginTop="20dp"
             android:layout_marginBottom="20dp"
-            android:text="Body Temperature"
+            android:text="Report / Analysis"
             android:textColor="#E91E63"
             android:textSize="20sp"
             android:textStyle="bold" />
 
 
     </androidx.cardview.widget.CardView>
+
+    <ImageView
+        android:id="@+id/iv_bluetooth"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="198dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="8dp"
+        android:background="#CC85D8"
+        android:clickable="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/tv_profile"
+        app:layout_constraintTop_toBottomOf="@+id/logout_App"
+        app:srcCompat="@android:drawable/stat_sys_data_bluetooth" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

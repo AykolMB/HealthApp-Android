@@ -105,6 +105,8 @@ public class Register extends AppCompatActivity {
                                 DatabaseReference ref = FirebaseDatabase.getInstance().getReference("Users");
                                 ref.child(username).setValue(user);
                                 Toast.makeText(Register.this, "User Created..", Toast.LENGTH_SHORT).show();
+                                DatabaseReference ref2 = FirebaseDatabase.getInstance().getReference("healthData");
+                                ref2.child(username);
                                 startActivity(new Intent(Register.this, MainPage.class));
                             }
                         }

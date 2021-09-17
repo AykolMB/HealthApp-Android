@@ -2,6 +2,11 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.bitirme">
 
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.BLUETOOTH_ADVERTISE" />
+    <uses-permission android:name="android.permission.BLUETOOTH_CONNECT" />
+    <uses-permission android:name="android.permission.BLUETOOTH_CONNECT" />
+    <uses-permission android:name="android.permission.BLUETOOTH_SCAN" />
     <uses-permission android:name="android.permission.INTERNET" />
 
     <application
@@ -11,7 +16,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Bitirme">
-        <activity android:name=".pulsePage"></activity>
+        <activity android:name=".Graph"></activity>
+        <activity android:name=".ReportScreen" />
+        <activity android:name=".controlling" />
+        <activity android:name=".bluetooth" />
         <activity android:name=".App_Main" />
         <activity android:name=".Register" />
         <activity

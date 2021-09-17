@@ -46,7 +46,6 @@ public class MainPage extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 loginUser();
-                Toast.makeText(MainPage.this, "Successfully Login",Toast.LENGTH_SHORT).show();
             }
         });
 
@@ -83,6 +82,8 @@ public class MainPage extends AppCompatActivity {
                         String emailFromDB = snapshot.child(username).child("email").getValue(String.class);
                         String ageFromDB = snapshot.child(username).child("age").getValue(String.class);
 
+                        Toast.makeText(MainPage.this, "Successfully Login",Toast.LENGTH_SHORT).show();
+
                         Intent intent = new Intent(MainPage.this, App_Main.class);
                         intent.putExtra("firstName", firstNameFromDB);
                         intent.putExtra("surname", surnameFromDB);
@@ -116,6 +117,7 @@ public class MainPage extends AppCompatActivity {
 
         if (password.isEmpty()){
             pw_mainPage.setError("Field can not be empty");
+            pw_mainPage.requestFocus();
             return false;
         }else{
             pw_mainPage.setError(null);
@@ -129,8 +131,14 @@ public class MainPage extends AppCompatActivity {
 
         if (email.isEmpty()){
             email_mainPage.setError("Field can not be empty");
+            email_mainPage.requestFocus();
             return false;
-        }else {
+        }else if(!email.contains("@")){
+            email_mainPage.setError("Please check entered email");
+            email_mainPage.requestFocus();
+            return false;
+        }
+        else {
             email_mainPage.setError(null);
             return true;
         }
