@@ -2,6 +2,7 @@ package com.example.bitirme;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
@@ -72,19 +73,19 @@ public class App_Main extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
-                SimpleDateFormat formatter = new SimpleDateFormat("dd-MM-yyyy HH:mm:ss");
+                SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
                 Date date = new Date(System.currentTimeMillis());
                 String dateStr = formatter.format(date);
 
                 //Ölçümleri yaptır
 
-                double randomPulse = Math.floor(Math.random()*(50) +50);    // 50 - 100
-                double randomStep = Math.floor(Math.random()*(1000) +1000); // 1000 - 2000
-                double randomBodyTemp = Math.floor(Math.random()*(4) +34);  // 34 - 38
-                double randomHumidity = Math.floor(Math.random()*(30) +30); // 30 - 60
+                double randomPulse = Math.floor(Math.random() * (50) + 50);    // 50 - 100
+                double randomStep = Math.floor(Math.random() * (1000) + 1000); // 1000 - 2000
+                double randomBodyTemp = Math.floor(Math.random() * (4) + 34);  // 34 - 38
+                double randomHumidity = Math.floor(Math.random() * (30) + 30); // 30 - 60
 
 
-                Measurement temp = new Measurement(dateStr, ""+randomPulse, ""+randomStep, ""+randomBodyTemp, ""+randomHumidity);
+                Measurement temp = new Measurement(dateStr, "" + randomPulse, "" + randomStep, "" + randomBodyTemp, "" + randomHumidity);
                 Measurement.uploadData(username, temp);
 
                 Toast.makeText(getApplicationContext(), "Data upload", Toast.LENGTH_SHORT).show();
@@ -96,10 +97,16 @@ public class App_Main extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
+
                 Intent intent = new Intent(App_Main.this, ReportScreen.class);
                 intent.putExtra("username", username);
                 startActivity(intent);
 
+                /*
+                Intent intent = new Intent(App_Main.this, BarChartPage.class);
+                intent.putExtra("username", username);
+                startActivity(intent);
+                */
                 /*
                 arrayList = Measurement.downloadData(username);
                 Log.d("TAG", "Arraylist Size: " + arrayList.size());
@@ -110,14 +117,14 @@ public class App_Main extends AppCompatActivity {
 
     private void showAllUserData() {
 
-        Intent intent =getIntent();
+        Intent intent = getIntent();
         String firstName = intent.getStringExtra("firstName");
         String surname = intent.getStringExtra("surname");
         String name = firstName + " " + surname;
         String email = intent.getStringExtra("email");
         String age = intent.getStringExtra("age");
         String password = intent.getStringExtra("password");
-        username = email.substring(0,email.indexOf("@"));
+        username = email.substring(0, email.indexOf("@"));
 
         nameMain.setText("Name: " + name);
         emailMain.setText("Email: " + email);

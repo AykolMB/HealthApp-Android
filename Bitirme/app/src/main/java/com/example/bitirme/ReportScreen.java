@@ -159,7 +159,8 @@ public class ReportScreen extends AppCompatActivity {
         butGraph.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(ReportScreen.this, Graph.class);
+                Intent intent = new Intent(ReportScreen.this, BarChartPage.class);
+                //Intent intent = new Intent(ReportScreen.this, Graph.class);
                 intent.putExtra("username", username);
 
                 String[] arrayDate = new String[arrayList.size()];

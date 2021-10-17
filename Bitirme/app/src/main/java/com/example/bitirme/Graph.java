@@ -24,8 +24,9 @@ import java.util.Arrays;
 
 public class Graph extends AppCompatActivity {
 
-    static String username, graph;
+
     XYPlot plot;
+    static String username, graph;
     static double[] array;
     static String[] arrayDate;
 
@@ -45,7 +46,6 @@ public class Graph extends AppCompatActivity {
 
         for (int i = 0 ; i<series1Numbers.length ; i++){
             series1Numbers[i] = array[i];
-            Log.d("Series index " + i, ": "+ series1Numbers[i]);
         }
 
 

@@ -16,7 +16,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Bitirme">
-        <activity android:name=".Graph"></activity>
+        <activity android:name=".BarChartPage"></activity>
+        <activity android:name=".Graph" />
         <activity android:name=".ReportScreen" />
         <activity android:name=".controlling" />
         <activity android:name=".bluetooth" />
