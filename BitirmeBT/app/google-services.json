@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "61879404396",
+    "project_id": "deneme-9c556",
+    "storage_bucket": "deneme-9c556.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:61879404396:android:cc0add8a6cf417c0a3d549",
+        "android_client_info": {
+          "package_name": "com.example.bitirme"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "61879404396-cs450mk1richkv0rcccohe4a71uoruda.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAs2If5QxJV2Zf8zjrx867Vox07IDVlfs4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "61879404396-cs450mk1richkv0rcccohe4a71uoruda.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
